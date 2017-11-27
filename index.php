@@ -4,7 +4,14 @@
         <meta charset="utf-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Bootstrap 4 necesita Tether, por lo que debe incluir tether.min.js antes de incluir -->
+        <script src="js/tether.min.js"></script>
+        <!-- jQuery (necesario para los complementos de JavaScript de Bootstrap) -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>-->
+        <!-- Incluye todos los complementos compilados (a continuación) o incluye archivos  individuales según sea necesario -->
+        <script src="js/bootstrap.min.js"></script>
         <title>boostrap</title>
     </head>
 <body>
@@ -54,10 +61,5 @@
   </form>
 </div>
 
-
-    <!-- jQuery (necesario para los complementos de JavaScript de Bootstrap) -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Incluye todos los complementos compilados (a continuación) o incluye archivos  individuales según sea necesario -->
-    <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
