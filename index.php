@@ -40,26 +40,28 @@
         </div>
     </nav>
 </header>
-
 <div class="container">
-  <h2>Iniciar Sesion</h2>
-  <form>
-    <div class="form-group">
-      <label for="email">Correo Electronico:</label>
-      <input type="email" class="form-control" id="email" placeholder="Ingrese Correo Electronico">
+  <div class="row">
+   <div class="col-3 mx-auto">
+     <h2>Iniciar Sesion</h2>
+     <form>
+       <div class="form-group">
+         <label for="email">Correo Electronico:</label>
+         <input type="email" class="form-control" id="email" placeholder="Ingrese Correo Electronico">
+       </div>
+       <div class="form-group">
+         <label for="pwd">Clave de Usuario:</label>
+         <input type="password" class="form-control" id="pwd" placeholder="Ingrese Clave">
+       </div>
+       <div class="form-check">
+         <label class="form-check-label">
+           <input class="form-check-input" type="checkbox"> Recordar Clave
+         </label>
+       </div>
+       <button type="submit" class="btn btn-primary">Acceder</button>
+     </form>
     </div>
-    <div class="form-group">
-      <label for="pwd">Clave de Usuario:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Ingrese Clave">
-    </div>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox"> Recordar Clave
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Acceder</button>
-  </form>
+  </div>
 </div>
-
     </body>
 </html>
