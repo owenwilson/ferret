@@ -1,8 +1,2 @@
-
-
-
-
-
-
-INSERT INTO 'usuario_login' ('usuario', 'contrasena', 'metodo') VALUES ('owenwilson', MD5('asdzxcqwe'), 'md5');
-INSERT INTO 'usuario_login' ('usuario', 'contrasena', 'metodo') VALUES ('periquito', SHA1('contraperiquito1'), 'sha1');
+INSERT INTO usuario (Id,Usuario, Contrasena, Email, TipoUsuario) VALUES (DEFAULT,'karen Pati','asdzxcqwe','karenpatito@gmail.com','contabilidad');
+INSERT INTO usuario (Id,Usuario, Contrasena, Email, TipoUsuario) VALUES (DEFAULT,'Owen Wilson','asdzxcqwe','owenwilson76467963@gmail.com','Administrador');
