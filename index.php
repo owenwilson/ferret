@@ -12,6 +12,9 @@
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>-->
         <!-- Incluye todos los complementos compilados (a continuación) o incluye archivos  individuales según sea necesario -->
         <script src="js/bootstrap.min.js"></script>
+        <!--integrando las funciones ajax con php-->
+        <script src="js/Login.js"></script>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <title>boostrap</title>
     </head>
 <body>
@@ -46,19 +49,19 @@
      <h2>Iniciar Sesion</h2>
      <form>
        <div class="form-group">
-         <label for="email">Correo Electronico:</label>
-         <input type="email" class="form-control" id="email" placeholder="Ingrese Correo Electronico">
+         <label for="email">Usuario:</label>
+         <input type="text" class="form-control" id="usuario" placeholder="Ingrese su Usuario">
        </div>
        <div class="form-group">
          <label for="pwd">Clave de Usuario:</label>
-         <input type="password" class="form-control" id="pwd" placeholder="Ingrese Clave">
+         <input type="password" class="form-control" id="contrasena" placeholder="Ingrese Clave">
        </div>
        <div class="form-check">
          <label class="form-check-label">
            <input class="form-check-input" type="checkbox"> Recordar Clave
          </label>
        </div>
-       <button type="submit" class="btn btn-primary">Acceder</button>
+       <button type="submit" class="btn btn-primary" id="Iniciar">Acceder</button>
      </form>
     </div>
   </div>
