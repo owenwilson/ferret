@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <title>boostrap</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Bootstrap 4 necesita Tether, por lo que debe incluir tether.min.js antes de incluir -->
         <script src="js/tether.min.js"></script>
@@ -13,9 +15,7 @@
         <!-- Incluye todos los complementos compilados (a continuación) o incluye archivos  individuales según sea necesario -->
         <script src="js/bootstrap.min.js"></script>
         <!--integrando las funciones ajax con php-->
-        <script src="js/Login.js"></script>
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-        <title>boostrap</title>
+        <script  type="text/javascript" src="js/Login.js" ></script>
     </head>
 <body>
 <header>
@@ -47,22 +47,25 @@
   <div class="row">
    <div class="col-3 mx-auto">
      <h2>Iniciar Sesion</h2>
-     <form>
+     <form action="php/LoginAjax.php" method="post" name="f1">
        <div class="form-group">
-         <label for="email">Usuario:</label>
-         <input type="text" class="form-control" id="usuario" placeholder="Ingrese su Usuario">
+         <label for="user">Usuario:</label>
+         <input type="text" class="form-control" id="usuario" placeholder="Ingrese su Usuario" name="usuario">
        </div>
        <div class="form-group">
-         <label for="pwd">Clave de Usuario:</label>
-         <input type="password" class="form-control" id="contrasena" placeholder="Ingrese Clave">
+         <label for="clv">Clave de Usuario:</label>
+         <input type="password" class="form-control" id="contrasena" placeholder="Ingrese Clave" name="contrasena">
        </div>
        <div class="form-check">
          <label class="form-check-label">
            <input class="form-check-input" type="checkbox"> Recordar Clave
          </label>
        </div>
-       <button type="submit" class="btn btn-primary" id="Iniciar">Acceder</button>
+       <button type="submit" class="btn btn-primary" id="iniciar" value="acceder" >Acceder</button>
      </form>
+     <div class="row" id="mensaje">
+
+     </div>
     </div>
   </div>
 </div>
