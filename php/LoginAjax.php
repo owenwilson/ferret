@@ -1,14 +1,23 @@
 <?php
-    include_once('Conexion.php');
+if (!($_POST)) {
+    header('Location:../404.html');
+}
+include_once('Conexion.php');
+    class consultar extends Conexion
+    {
+
+        function consultando()
+        {
     $mensajeOk=false;
     $mensajeError='El sistema no se encuentra disponible';
-    if(isset($_POST['Usuario'],$_POST['Contrasena'])):
-        if($_POST['Usuario']!=""):
-            if($_POST['Contrasena']!=""):
-                $Usuario = $_POST['Usuario'];
-                $Contrasena = $_POST['Contrasena'];
-                $consulta = pg_query ($Conexion,("SELECT * FROM usuario where Usuario='Usuario' and Contrasena='Contrasena'"));
+    if(isset($_POST['usuario'],$_POST['contrasena'])):
+        if($_POST['usuario']!=""):
+            if($_POST['contrasena']!=""):
+                $Usuario = $_POST['usuario'];
+                $Contrasena = $_POST['contrasena'];
+                $consulta = pg_query ($dsn,("SELECT * FROM usuario WHERE usuario='Usuario' AND contrasena='Contrasena'"));
                 if(pg_num_rows($consulta)>0):
+                //if(pg_fetch_array($consulta)>0):
                     $mensajeOk = true;
                     $User = pg_fetch_array($consulta);
                     session_start();
@@ -29,4 +38,6 @@
     endif;
     $salidaJson = $arrayName = array('respuesta' => $mensajeOk, 'mensaje' => $mensajeError);
     echo json_encode($salidaJson);
+}
+}
 ?>
