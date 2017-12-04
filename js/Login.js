@@ -1,13 +1,24 @@
 $(document).ready(function(){
-    $("#Iniciar").click(function(){
+    $('#iniciar').click(function(){
         var Usuario = $('#usuario').val();
         var Contrasena = $('#contrasena').val();
+        var datosCadena = 'Usuario='+ Usuario + '&Contrasena='+ Contrasena;
+        if (Usuario=='' || Contrasena=='') {
+            alert("ingrese los datos");
+        }else{
+
         //console.log(Usuario,Contrasena);
-        $ajax({
+        $.ajax({
+            //data:{"Usuario" : "usuario" , "Contrasena" : "contrasena"},
+            data:$('iniciar').serialize(),
+            //data:datosCadena,
             type:"POST",
-            datatype:'json',
-            url:'php/LoginAjax.php',
-            data:{Usuario:Usuario,Contrasena:Contrasena},
+            datatype:"json",
+            url:"php/LoginAjax.php",
+            cache:false,
+            /*success: function(result){
+                alert(result);
+            }*/
             success:function(response){
             if(response.respuesta==true){
                 $("#mensaje").html(response.mensaje);
@@ -19,5 +30,6 @@ $(document).ready(function(){
             alert('Error General en el sistema');
         }
         });
+        }
     });
 });
